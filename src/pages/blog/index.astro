@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const posts = await Astro.glob('../../content/blog/*.md');
+---
+
+<Layout title="Puzzle Paradise Blog" description="Articles on puzzle-solving tips, history, and new releases.">
+	<section class="py-8">
+		<h1 class="text-3xl font-bold mb-6">Puzzle Paradise Blog</h1>
+		<ul>
+			{posts.map((post) => (
+				<li class="mb-4">
+					<a href={post.url} class="text-primary hover:text-secondary">
+						<h2 class="text-xl font-semibold">{post.frontmatter.title}</h2>
+					</a>
+					<p class="text-gray-600 text-sm">Published: {post.frontmatter.pubDate}</p>
+					<p class="text-gray-700">{post.frontmatter.description}</p>
+				</li>
+			))}
+		</ul>
+	</section>
+</Layout>

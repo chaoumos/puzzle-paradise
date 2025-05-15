@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const siteTitle = "Puzzle Paradise: Your Daily Dose of Brain Teasers";
+const siteDescription = "Discover unique and handcrafted puzzles. From jigsaw classics to 3D brain teasers, find the perfect challenge for all skill levels.";
+---
+
+<Layout title={siteTitle} description={siteDescription}>
+	<section class="hero bg-secondary text-neutral py-16 rounded-lg shadow-md">
+		<div class="container mx-auto text-center">
+			<h1 class="text-4xl font-bold mb-4">Welcome to Puzzle Paradise!</h1>
+			<p class="text-lg">Your ultimate destination for brain-teasing fun. Explore our wide selection of puzzles for all ages and skill levels.</p>
+			<a href="#shop" class="inline-block mt-8 py-3 px-8 bg-accent text-primary font-bold rounded-full hover:bg-primary hover:text-accent transition-colors">Shop Now</a>
+		</div>
+	</section>
+
+	<section id="featured-products" class="py-12">
+		<h2 class="text-3xl font-bold mb-6 text-center">Featured Puzzles</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<div class="bg-white rounded-lg shadow-md overflow-hidden">
+				<img src="https://placehold.co/600x400.png" alt="Jigsaw Puzzle" data-ai-hint="colorful jigsaw puzzle" class="w-full h-48 object-cover" />
+				<div class="p-4">
+					<h3 class="text-xl font-semibold mb-2">Classic Jigsaw Puzzle</h3>
+					<p class="text-gray-700">A timeless classic for puzzle lovers of all ages.</p>
+					<p class="text-primary font-bold mt-2">$24.99</p>
+				</div>
+			</div>
+
+			<div class="bg-white rounded-lg shadow-md overflow-hidden">
+				<img src="https://placehold.co/600x400.png" alt="3D Puzzle" data-ai-hint="complex 3d wooden puzzle" class="w-full h-48 object-cover" />
+				<div class="p-4">
+					<h3 class="text-xl font-semibold mb-2">3D Wooden Puzzle</h3>
+					<p class="text-gray-700">Challenge your spatial reasoning with this intricate 3D puzzle.</p>
+					<p class="text-primary font-bold mt-2">$39.99</p>
+				</div>
+			</div>
+
+			<div class="bg-white rounded-lg shadow-md overflow-hidden">
+				<img src="https://placehold.co/600x400.png" alt="Brain Teaser Puzzle" data-ai-hint="metal brain teaser puzzle" class="w-full h-48 object-cover" />
+				<div class="p-4">
+					<h3 class="text-xl font-semibold mb-2">Metal Brain Teaser</h3>
+					<p class="text-gray-700">Test your problem-solving skills with this perplexing brain teaser.</p>
+					<p class="text-primary font-bold mt-2">$19.99</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="customer-reviews" class="py-12 bg-gray-100">
+		<h2 class="text-3xl font-bold mb-6 text-center">What Our Customers Say</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			<div class="bg-white rounded-lg shadow-md p-4">
+				<p class="text-gray-700 italic mb-2">"Great selection of puzzles and fast shipping!"</p>
+				<p class="text-gray-600 font-semibold">- Jane Doe</p>
+			</div>
+			<div class="bg-white rounded-lg shadow-md p-4">
+				<p class="text-gray-700 italic mb-2">"The 3D puzzle was a fun and challenging experience."</p>
+				<p class="text-gray-600 font-semibold">- John Smith</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="blog" class="py-12">
+		<h2 class="text-3xl font-bold mb-6 text-center">Latest Blog Posts</h2>
+		<p>Check out our blog for puzzle-solving tips, history, and new releases.</p>
+		<a href="/blog" class="inline-block mt-4 py-2 px-6 bg-primary text-neutral font-bold rounded-full hover:bg-accent hover:text-primary transition-colors">Read the Blog</a>
+	</section>
+</Layout>

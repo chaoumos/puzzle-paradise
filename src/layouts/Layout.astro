@@ -1,0 +1,44 @@
+---
+import type { Props as PropsType } from 'astro';
+
+export interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title, description } = Astro.props as PropsType;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content={description}>
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="generator" content={Astro.generator} />
+	<title>{Astro.props.title || `${"Puzzle Paradise: Your Daily Dose of Brain Teasers"}`}</title>
+</head>
+<body class="bg-neutral text-gray-800">
+	<header class="bg-primary py-4 shadow-md">
+		<div class="container mx-auto flex items-center justify-between">
+			<a href="/" class="text-2xl font-bold text-neutral hover:text-accent">Puzzle Paradise</a>
+			<nav>
+				<ul class="flex space-x-6">
+					<li><a href="/" class="text-neutral hover:text-accent">Home</a></li>
+					<li><a href="/blog" class="text-neutral hover:text-accent">Blog</a></li>
+					<li><a href="#" class="text-neutral hover:text-accent">Shop</a></li>
+					<li><a href="#" class="text-neutral hover:text-accent">About</a></li>
+					<li><a href="#" class="text-neutral hover:text-accent">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main class="container mx-auto py-8">
+		<slot />
+	</main>
+	<footer class="bg-gray-200 py-4 text-center">
+		<p>© {new Date().getFullYear()} Puzzle Paradise: Your Daily Dose of Brain Teasers</p>
+	</footer>
+</body>
+</html>
